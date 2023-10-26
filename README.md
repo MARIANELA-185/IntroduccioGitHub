@@ -583,6 +583,10 @@ Allà podem verificar el codi, fer un merge a la branca local **dev** per compro
 
  Un cop fet això, hauria de sincronitzar els canvis amb un `git pull origin master`, cosa que també hauria de fer el propietari del repositori per tenir el repositori local actualitzat. Finalment, s'haurien d'esborrar les branques implicades en el pull request.
 
+ Ho podem resumir amb el següent esquema:
+
+ ![col·laboració via pull request](./img/fork-collab.png)
+
 ## Altres comandes interessants
 
 | Comanda         | Descripció                                                        |
@@ -638,6 +642,81 @@ En conseqüència, el desenvolupament basat en tronc és un activador clau de la
 
 ![Trunk-based](./img/trunk-based.png)
 
+## Altres funcionalitats de GitHub
+
+GitHub ha anat evolucionant a partir de la idea del servidor de control de versions, incloent més funcionalitats pensades per crear tot un ecosistema pels desenvolupadors per tal de facilitar la comunicació entre els diversos col·laboradors, així com donar eines per millorar la gestió i documentació del projecte.
+
+### Issues (propostes)
+
+Eina que ens permet crear notes associades a un determinat repositori amb l'objectiu de:
+
+- Identificar errors en el codi i fer seguiment.
+- Proposar millores o noves funcionalitats.
+- Fer un seguiment de les tasques a realitzar en el repositori.
+
+Al text dels Issues es poden mencionar usuaris de GitHub, fer referència a línies de codi, inserir fragments de codi o crear llistes de tasques que poden marcar-se com completades.
+
+![GitHub Isssue](./img/issue01.png)
+
+### Milestones (fites)
+
+Eina que ens permet agrupar issues i pull request en un determinat fita. Aquesta eina ens permet fer un seguiment de les tasques a realitzar en un projecte.
+
+![GitHub Milestone](./img/milestone.png)
+
+### Projects (projectes)
+
+Eina que ens permet crear un tauler on podem afegir notes amb l'objectiu de fer un seguiment de les tasques a realitzar en un projecte. Es poden associar a un o més repositoris.
+
+Existeixen diverses vistes: Kanban, roadmap, etc. Es poden afegir etiquetes, assignar a usuaris, etc. i definir noves tasques a partir de les issues.
+
+![GitHub Project](./img/project.png)
+
+### Wiki
+
+Eina que ens permet crear un wiki per a un repositori. Aquest wiki es pot editar per qualsevol usuari de GitHub que tingui permisos d'accés al repositori.
+
+![GitHub Wiki](./img/wiki.png)
+
+## GitHub Pages
+
+GitHub Pages és un servei d'allotjament web estàtic gratuït, dissenyat per allotjar els teus projectes directament des d'un repositori GitHub. Pots crear i publicar pàgines web de forma gratuïta [límits d'ús](https://docs.github.com/es/pages/getting-started-with-github-pages/about-github-pages#l%C3%ADmites-de-uso-de-github-pages).
+
+Es poden utilitzar per allotjar un lloc web personal, un lloc web de projecte, una documentació de codi o qualsevol altra cosa que puguis pensar que es pugui fer amb un lloc web estàtic.
+
+### Crear un lloc web amb GitHub Pages
+
+Per crear un lloc web amb GitHub Pages, has de crear un repositori amb el nom d'usuari de GitHub. Si el nom d'usuari de GitHub és `carlesalonso`, el repositori s'anomenarà `carlesalonso.github.io`. Si el nom d'usuari de GitHub és `carlesalonso` i el repositori és `webprova`, el lloc web es publicarà a `carlesalonso.github.io/webprova`.
+
+![GitHub Pages](./img/githubpages.png)
+
+![GitHub Pages resultat](./img/githubpages2.png)
+
+Alguns exemples molt interesssants:
+
+- [Blog utilitzant Hugo](https://cristinafsanz.github.io/projects/about/)
+- [Presentació utilitzant WebSlides](https://cristinafsanz.github.io/melies-origen/#slide=1)
+- [Portfolio](https://hamishw.com)
+
+## GitHub Actions
+
+GitHub Actions és un servei d'integració i desplegament continu que permet automatitzar el flux de treball del desenvolupament de programari amb accions personalitzades. Les accions són tasques que es poden combinar per crear fluxos de treball personalitzats.
+
+I què això de la integració contínua (CI)? Doncs és una pràctica de desenvolupament de programari en la qual els desenvolupadors fusionen els canvis en el codi en un repositori compartit diverses vegades al dia. Cada fusió es comprova automàticament mitjançant la creació i l'execució d'una sèrie de proves. Això permet detectar i solucionar problemes de manera més ràpida.
+
+Els canvis introduits pels desenvolupadors es validen creant una prova automatitzada de creació i execució. Si les proves són exitoses, els canvis es fusionen amb la branca de publicació. Si les proves no són exitoses, es notifica al desenvolupador que el codi no es pot fusionar fins que no es corregeixi.
+
+Parlem de desplegament continu (CD) quan els canvis es fusionen amb la branca de publicació, es despleguen automàticament en un entorn de producció, sense intervenció humana. Això ens permet alliberar noves versions del nostre software de manera més ràpida i segura.
+
+La integració contínua, unida al desplegament continu, integra la filosofia **devops** que tant de moda està actualment.
+
+![CI/CD](./img/cicd.png)
+
+## Codespaces
+
+Codespaces és un entorn de desenvolupament en el núvol que es pot utilitzar per a projectes privats i públics. Pots crear un codespace per a un repositori i utilitzar-lo per editar i depurar el codi en un navegador web o en Visual Studio Code.
+
+Es basen en la tecnologia de contenidors de Docker i permeten tenir un entorn de desenvolupament completament configurat i personalitzat per a cada projecte.
 
 ## Links
 
@@ -646,3 +725,10 @@ En conseqüència, el desenvolupament basat en tronc és un activador clau de la
 - [The Official GitHub Training Manual](https://githubtraining.github.io/training-manual/#/)
 - [Pro Git. Llibre en format electrònic](https://git-scm.com/book/es/v2)
 - [Learning Git branching](https://learngitbranching.js.org/?locale=es_ES)
+- [Git Explorer](https://gitexplorer.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [GitHub Lab](https://lab.github.com/)
+- [GitHub Actions](https://docs.github.com/es/actions)
+- [Introducción a las GitHub Actions](https://www.plainconcepts.com/es/que-es-github-actions/)
+- [Guía rápida ci-cd con GitHub Actions y Netlify](https://www.adictosaltrabajo.com/2022/03/17/guia-rapida-ci-cd-con-github-actions-y-netlify-para-ingenieros-de-front-end/)
+- [GitHub Codespaces](https://docs.github.com/en/codespaces/overview)
